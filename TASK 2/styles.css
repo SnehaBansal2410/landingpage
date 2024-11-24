@@ -1,0 +1,252 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #fdf7e6; /* Cream background */
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+/* Hero Section */
+.hero-section {
+    max-width: 800px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffdd57;
+    color: #333;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffc107;
+    transform: translateY(-3px);
+}
+
+/* Features Section */
+section {
+    padding: 60px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: #ffdd57;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    color: #6b73ff;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    font-family: 'Poppins', sans-serif;
+}
+
+footer a {
+    color: #ffdd57;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .feature-cards {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    .card {
+        padding: 20px 15px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
